@@ -1,0 +1,71 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>$WikiTitle / {$Group} / {$TitleSpaced}</title>
+  <link rel="stylesheet" type="text/css" href="$SkinDirUrl/css/normalize.css">
+  <link rel="stylesheet" type="text/css" href="$SkinDirUrl/css/wikicmds-1-2.css">
+  <link rel="stylesheet" type="text/css" href="$SkinDirUrl/css/clarity5-all.css">
+  <link rel="stylesheet" type="text/css" media="screen and (min-width: 980px)" href="$SkinDirUrl/css/clarity5-large-screen.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+  <!--HTMLHeader-->	
+</head>
+<body>
+  <div id="site-head">
+    <div id="wikilogo-wrapper"><a href='$ScriptUrl/'><img src='$PageLogoUrl' alt='$WikiTitle' border='0' /></a></div>
+	<div class="pull-right searchbox">
+        <form action="#">
+          <input type="hidden" name="action" value="search"/>
+		  <!-- rajoittaa haun vain avoimeen sivustoon -->
+		  <input type="hidden" name="group" value="{$Group}"/>
+		  
+          <input name="q" type="text" placeholder="Etsi sivustolta"/>
+		  <button type="submit">Hae</button>
+        </form>
+      </div>
+	<h1>$WikiTitle &middot; <a href="{$ScriptUrl}/{$Group}">{$Group}</a> / <a href="{$ScriptUrl}/{$Group}/{$Name}{$">{$Titlespaced}</a></h1>
+  </div>
+  
+  <div id="sidebar">
+     <!--wiki:$Group.SideBar $SiteGroup.SideBar-->
+  </div>
+  <div id="wiki-page">
+    <div id="page-header">
+	
+	<div class="wikicmds pull-right">
+          <ul>
+            <li><a href="{$ScriptUrl}/{$Group}/{$Name}?action=edit">Muokkaa</a></li>
+            <li><a href="#"><img src="$SkinDirUrl/images/options.png" alt="*"></a>
+              <ul>
+                <li>
+                  <p>Toiminnot</p>
+                </li>
+                <li><a href="{$ScriptUrl}/{$Group}/{$Name}?action=diff">Historia</a></li>
+                <li><a href="{$ScriptUrl}/{$Group}/{$Name}?action=search&q=link={$Group}.{$Name}">Linkit tänne</a></li>
+                <li><a href="{$ScriptUrl}/{$Group}/{$Name}?action=upload">Liitteet</a></li>
+				<li><a href="{$ScriptUrl}/{$Group}/{$Name}?action=attr">Oikeudet</a></li>
+				<li>
+                  <p>Sivusto</p>
+                </li>
+                <li><a href="{$ScriptUrl}/{$Group}/RecentChanges">Viimeiset päivitykset</a></li>
+                <li><a href="{$ScriptUrl}/{$Group}/SideBar?action=edit">Muokkaa sivupalkkia</a></li>
+              </ul>
+            </li-->
+          </ul>
+        </div>
+    <h1><a href="{$ScriptUrl}/{$Group}/{$Name}">{$Title}</a></h1>
+  </div>
+    <!--PageText-->
+  </div>
+  <div id="site-footer">
+	<!--HTMLFooter-->
+	<p class="site-info">
+      <a href="{$ScriptUrl}">$WikiTitle</a> 
+      wiki runs 
+      <a href="http://www.pmwiki.org/">PmWiki</a> 
+      with 
+      <a href="http://mekanismi.sange.fi">Clarity 5 (alpha 6)</a>
+    </p>
+  </div>
+</body>
+</html>

@@ -1,0 +1,17 @@
+div#sidebar{
+	float:left;
+	width:170px;
+  padding-right:11px;
+  overflow:hidden;
+  word-wrap: break-word;
+}
+div#wiki-page{
+	margin-left:190px;
+}
+div#site-footer{
+	clear:both;
+}
+.note{
+    float:right;
+    width:30%;
+}

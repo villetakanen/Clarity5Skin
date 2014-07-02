@@ -1,0 +1,180 @@
+/*
+ *.wikicmds bar in 2011 style
+ *
+ * v1.2
+ *
+ * Based on design of Google mail and http://paulgiacherio.kodingen.com/pmwiki/pmwiki-2.2.30/pmwiki.php?n=PmWiki.DocumentationIndex
+ */
+@media screen{
+
+.searchbox input,
+.searchbox button{
+	background:#fff;
+	-moz-border-radius:3px;
+	-webkit-border-radius:3px;
+	border:1px solid rgba(0,0,0,.2);
+	padding: 4px 8px;
+	display:inline-block;
+	/*-webkit-box-shadow: 0 0 0px 1px rgba(0,0,0,0.2);
+	box-shadow: 0 0 0px 1px rgba(0,0,0,0.2);*/
+	text-decoration:none;
+	font-size:11px;
+	letter-spacing:.5px;
+	
+	color:#555;
+}
+.searchbox button{
+	background-image: -moz-linear-gradient(  center bottom,  rgb(238,238,238) 0%,  rgb(248,248,248) 100%  );
+	background-image: -webkit-gradient(  linear,  left bottom,  left top,  color-stop(0, rgb(238,238,238)),  color-stop(1, rgb(248,248,248))  );
+	text-transform:uppercase;
+	font-family:Arial;
+	font-weight:bold;
+}
+/*
+ *First level menu items are shown as a rounded grey bar
+ */
+.wikicmds ul {
+	float:left;
+	background:#eee;
+	background-image: -moz-linear-gradient(  center bottom,  rgb(238,238,238) 0%,  rgb(248,248,248) 100%  );
+	background-image: -webkit-gradient(  linear,  left bottom,  left top,  color-stop(0, rgb(238,238,238)),  color-stop(1, rgb(248,248,248))  );
+	-moz-border-radius:3px;
+	-webkit-border-radius:3px;
+	list-style:none;
+	margin: 0;
+	padding: 0;
+	display:block;
+}
+.wikicmds li {
+	float:left;
+	margin-left:0;
+	position: relative;
+}
+
+.wikicmds li a, .wikicmds li p {
+	display:inline-block;
+	line-height:3em;
+	text-decoration:none;
+	padding:0 20px;
+	font-family:Arial;
+	font-size:10px;
+	text-transform:uppercase;
+	letter-spacing:.5px;
+	font-weight:bold;
+	color:#555;
+	text-shadow:0 1px 0 #fff;
+	border:1px solid rgba(0,0,0,.1);
+	border-right:0;
+	-moz-box-shadow:inset 1px 0 0 rgba(255,255,255,.75);
+	-webkit-box-shadow:inset 1px 0 0 rgba(255,255,255,.75);
+}
+.wikicmds li a.createlink {
+	padding: 0 5px;
+	-moz-box-shadow:inset 1px 0 0 rgba(255,255,255,.75);
+	-webkit-box-shadow:inset 1px 0 0 rgba(255,255,255,.75);
+}
+.wikicmds li:first-of-type a {
+	-moz-border-radius:3px 0 0 3px;
+	-webkit-border-radius:3px 0 0 3px;
+	border-left:1px solid rgba(0,0,0,.1);
+	-moz-box-shadow:none;
+	-webkit-box-shadow:none;
+}
+.wikicmds li:last-of-type a {
+	-moz-border-radius:0 3px 3px 0;
+	-webkit-border-radius:0 3px 3px 0;
+	border-right:1px solid rgba(0,0,0,.1);
+}
+.wikicmds li a:hover {
+	background:rgba(0,0,0,.025);
+	color:#222;
+}
+.wikicmds li a img {
+	vertical-align: top;
+	padding: 2px;
+	padding-top: 2px;
+	width:26px;
+	height:26px;
+}
+/*
+ * Second level menu is shown as a more traditional menu-list on hover
+ */
+.wikicmds li ul {
+	/* Hide the menu if its not selected */
+	display: none;
+}
+.wikicmds li:hover > ul {
+	/* Show second level menu on hover*/
+	display: block;
+}
+.wikicmds li ul {
+	position: absolute;
+	top: 29px;
+	right: 0;
+	margin-right: 4px;
+	z-index: 9999;
+	width: 210px;
+	background-image: -moz-linear-gradient(  center bottom,  rgb(228,228,228) 0%,  rgb(248,248,248) 100%  );
+	background-image: -webkit-gradient(  linear,  left bottom,  left top,  color-stop(0, #CCC),  color-stop(1, #FFF)  );
+	border: 1px solid #AAA;
+	/* debug /** / 
+	display: block;
+	/**/
+}
+.wikicmds li ul li:first-child p:after {
+	/* This is the little arrow in top of the menu */
+	content: '';
+	position: absolute;
+	right: -15px;
+	top: -9px;
+	width: 0;
+	height: 0;
+	border-left: 5px solid transparent;
+	border-right: 5px solid transparent;
+	border-bottom: 8px solid #AAA;
+}
+.wikicmds li ul li p {
+	-moz-border-radius:3px 0 0 3px;
+	-webkit-border-radius:3px 0 0 3px;
+	border-left:1px solid rgba(0,0,0,.1);
+	-moz-box-shadow:none;
+	-webkit-box-shadow:none;
+}
+/*
+ * submenu
+ */
+.wikicmds li ul li {
+	display: block;
+	float:none;
+	width: 170px;
+	/*width:100%;*/
+}
+.wikicmds li ul li a,
+.wikicmds li ul li p
+{
+	width:inherit;
+	text-shadow:none;
+	-moz-border-radius:0;
+	-webkit-border-radius:0;
+	border: none;
+	-moz-box-shadow:none;
+	-webkit-box-shadow:none;
+}
+.wikicmds li ul li a{
+}
+
+.wikicmds li ul li p {
+	color:black;
+	background-color: rgba(0,0,0,0.1);;
+}
+
+
+}
+/*
+ * Hide wikicmds in print media
+ */
+@media print {
+.wikicmds {
+	display:none;
+}
+}

@@ -1,0 +1,162 @@
+body{
+	font:13px/22px Arial,sans-serif;
+}
+
+h1,h2,h3,h4{
+	color:#555;
+	margin: 0.5em 0;
+}
+h1 a,h2 a,h3 a,h4 a{
+	text-decoration:none;
+	color:black;
+}
+h3{
+	text-transform: uppercase;
+	
+}
+h4{
+	text-transform: uppercase;
+	color: #777;
+}
+p{
+	margin:0;
+}
+
+a{
+	color: #0088cc;
+	text-decoration:none;
+}
+.pull-right{
+	float:right;
+}
+
+/* PmWiki specific*/
+.vspace{
+	margin-top:1em;
+}
+.note{
+	background-color:#F3F3F3;
+	margin-top:0.5em;
+    margin-bottom:0.5em;
+    padding:8px;
+}
+
+textarea#text{
+	width:100%;
+	font-family:Lucida console, monospace;
+}
+#wikitext table td{
+    border: solid 1px #555;
+    padding: 4px;
+}
+#wikitext table th{
+    padding: 4px;
+}
+
+#wikitext table.light td{
+	border: solid 1px #ddd;
+}
+#wikitext table.light th{
+	background-color: #eee;
+}
+#wikitext a.urllink {
+	background: url(../images/world-1.png) center right no-repeat;
+	padding-right: 21px;
+	color: #3A5D8D;
+}
+.indent{
+    padding-left:16px;
+}
+.escaped{
+    background-color:RGBA(10,10,20,0.07);
+    color: black;
+    padding: 0 4px;
+}
+
+/*site header*/
+div#site-head{
+	background-color:#eee;
+	margin:0;
+	padding:16px;
+}
+div#site-head h1{
+	margin:0;
+	padding:0;
+	font-size: 16px;
+	line-height: 16px;
+}
+div#site-head a{
+	color:black;
+	text-decoration: none;
+}
+div#wikilogo-wrapper{
+    float: right;
+    max-height: 22px;
+    margin-left: 16px;
+}
+div#wikilogo-wrapper img{
+  max-height: 22px;
+}
+
+/* wiki page*/
+div#wiki-page{
+	margin:0;
+	padding:16px;
+}
+
+div#page-header{
+	padding-bottom:16px;
+	min-width:320px;
+	
+}
+div#page-header h1{
+	font-weight: normal;
+	/*color:#555;*/
+	font-size:1.25em;
+	margin:0;
+	padding:0;
+}
+div#page-header a{
+	color:black;
+	text-decoration: none;
+}
+/*Sidebar */
+div#sidebar{
+	padding:16px;
+	margin:0;
+}
+div#sidebar  a{
+	/*color:#222;*/
+	text-decoration:none;
+}
+
+div#sidebar .sidehead{
+	text-transform: uppercase;
+	color: #777;
+}
+div#sidebar .sidehead a{
+	color:#555;
+}
+
+div#sidebar ul{
+	list-style-type:none;
+	margin:0;
+	padding:0;
+	margin-left: 10px;
+}
+div#sidebar li{
+	margin:0;
+	padding:0;
+	font:13px/17px Arial,sans-serif;
+    padding-bottom:4px;
+}
+
+/*footer*/
+div#site-footer{
+	margin:16px;
+	color: #777;
+}
+div#site-footer a{
+	color:#444;
+	text-decoration:none;
+}
